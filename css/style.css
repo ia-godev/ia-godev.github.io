@@ -28,10 +28,26 @@ body {
   color: #fff;
   font-size: 30px;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.underpages:hover {
-  color: #ffffffb3;
+
+.underpages-title,
+.underpages-content {
+  transition: transform 100ms;
+}
+.underpages:hover .underpages-title {
   text-decoration: underline;
+  transform: translateY(-50%);
+}
+
+.underpages-content {
+  z-index: -1;
+}
+.underpages:hover .underpages-content {
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
 .underpages img {
