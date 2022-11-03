@@ -1,4 +1,4 @@
 # ia-godev.github.io
 
-My site
+My games site :
 https://ia-godev.github.io

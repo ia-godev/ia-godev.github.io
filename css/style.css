@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: #010409;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.underpages {
+  height: 30vh;
+  width: 40vw;
+  background: #161b22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+}
+.underpages:hover {
+  color: #ffffffb3;
+  text-decoration: underline;
+}
