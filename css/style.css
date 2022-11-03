@@ -15,12 +15,14 @@ body {
 #body {
   display: flex;
   justify-content: space-around;
-  padding: 30px;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .underpages {
   height: 30vh;
   width: 40vw;
+  margin-top: 25px;
   background: #161b22;
   display: flex;
   justify-content: center;
