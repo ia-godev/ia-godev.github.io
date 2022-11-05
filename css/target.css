@@ -1,37 +1,3 @@
-body {
-  padding: 20px;
-  height: 90vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.container-info {
-  height: 30px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.targetNb,
-.time {
-  background: #161b22;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 30px;
-}
-
-.container-target {
-  background: #161b22;
-  height: 60vh;
-  width: 100%;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .result {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -46,15 +12,6 @@ body {
 
 .target img {
   height: 10vh;
-}
-
-.restartBtn {
-  border: 0;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 40px;
-  background: #161b22;
-  color: #fff;
 }
 
 @media (pointer: coarse) {

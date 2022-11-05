@@ -1,5 +1,7 @@
-let timeC = 0;
+let timeC = -1;
 let i = 1;
+
+clickTarget();
 
 function randomInt(min, max) {
   return String(Math.floor(Math.random() * max) + min);
@@ -32,7 +34,8 @@ function restartBtn() {
   let timeCount = document.getElementById("timeCount");
   let target = document.getElementById("target");
   let result = document.getElementById("result");
-  if (i == 11) {
+  console.log(i);
+  if (i == 10) {
     i = 1;
     timeC = -1;
     result.innerText = null;

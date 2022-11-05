@@ -1,6 +1,6 @@
 let clickNumber = 0;
 let timerC = 0;
-let i = 0;
+let i = 1;
 
 function clickBtn() {
   timerC++;
@@ -26,7 +26,7 @@ function clickBtn() {
 function restartBtn() {
   let timeCount = document.getElementById("timeCount");
   let clickBtn = document.getElementById("clickBtn");
-  if (i == 10) {
+  if (i == 11) {
     timerC = 0;
     i = 1;
     timeCount.innerText = 10;

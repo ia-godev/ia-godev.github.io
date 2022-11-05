@@ -1,0 +1,21 @@
+.main-container {
+  background: #ffffff;
+}
+
+.snake,
+.target {
+  height: 3vh;
+  width: 3vh;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.snake {
+  background: green;
+}
+
+.target {
+  background: red;
+  height: 3vh;
+  width: 3vh;
+}

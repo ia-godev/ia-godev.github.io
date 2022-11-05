@@ -1,0 +1,12 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.color {
+  background-color: red;
+  height: 60vh;
+  width: 90%;
+  border-radius: 5px;
+}

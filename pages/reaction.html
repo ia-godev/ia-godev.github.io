@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/js/reaction.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/reaction.css">
+  <title>Game - Reaction</title>
+</head>
+
+<body>
+  <div id="container-info" class="container-info">
+    <div id="info" class="info">Click when it turns green</div>
+    <div id="time" class="time"><span id="timeCount" class="timeCount">0</span> ms</div>
+  </div>
+  <button id="clickBtn" class="main-container" onclick="clickBtn()">
+    <div id="color" class="color"></div>
+  </button>
+  <button id="restart" class="restartBtn" onclick="restartBtn()">Restart</button>
+</body>
+
+</html>
