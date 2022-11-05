@@ -13,8 +13,11 @@
 </head>
 
 <body>
-	<button id="clickBtn" class="clickBtn" onclick="clickNm(); ifTimer()">0</button>
-	<button id="restart" class="restartBtn" onclick="restartNm()">Restart</button>
+	<div id="container-info" class="container-info">
+		<div id="time" class="time"><span id="timeCount" class="timeCount">10</span> seconds left</div>
+	</div>
+	<button id="clickBtn" class="clickBtn" onclick="clickBtn()">0</button>
+	<button id="restart" class="restartBtn" onclick="restartBtn()">Restart</button>
 </body>
 
 </html>

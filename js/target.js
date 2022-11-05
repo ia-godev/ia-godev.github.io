@@ -1,4 +1,4 @@
-let timeCount = 0;
+let timeC = 0;
 let i = 1;
 
 function randomInt(min, max) {
@@ -11,8 +11,8 @@ function clickTarget() {
   target.style.position = "absolute";
   target.style.top = randomInt(20, 40) + "vh";
   target.style.left = randomInt(10, 80) + "vw";
-  timeCount++;
-  if (timeCount == 1) {
+  timeC++;
+  if (timeC == 1) {
     let countdown = setInterval(() => {
       let timeCount = document.getElementById("timeCount");
       timeCount.innerText = 10 - i;
@@ -23,7 +23,7 @@ function clickTarget() {
     }, 11000);
     setTimeout(() => {
       target.style.zIndex = "-1";
-      result.innerText = timeCount / 10 + " target per seconds";
+      result.innerText = timeC / 10 + " target per seconds";
     }, 10000);
   }
 }
@@ -34,10 +34,10 @@ function restartBtn() {
   let result = document.getElementById("result");
   if (i == 11) {
     i = 1;
-    timeCount = -1;
+    timeC = -1;
     result.innerText = null;
     target.style.zIndex = "1";
-    timeCount.innerText = "10";
+    timeCount.innerText = 10;
     clickTarget();
   }
 }

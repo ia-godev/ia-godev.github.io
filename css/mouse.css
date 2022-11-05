@@ -3,6 +3,21 @@
   height: auto;
 }
 
+.container-info {
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.time {
+  background: #161b22;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 30px;
+}
+
 button {
   border: 0;
   border-radius: 5px;

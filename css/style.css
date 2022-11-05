@@ -56,3 +56,25 @@ body {
   height: 30px;
   padding-left: 10px;
 }
+
+@media (pointer: coarse) {
+  .underpages {
+    height: 20vh;
+    width: 60vw;
+  }
+
+  .underpages-title,
+  .underpages-content {
+    transition: all 0ms;
+    text-decoration: underline;
+  }
+
+  .underpages-content {
+    z-index: -1;
+  }
+
+  .underpages:hover .underpages-title,
+  .underpages-content {
+    transform: none;
+  }
+}

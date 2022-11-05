@@ -56,3 +56,9 @@ body {
   background: #161b22;
   color: #fff;
 }
+
+@media (pointer: coarse) {
+  .result {
+    font-size: 30px;
+  }
+}
