@@ -1,13 +1,22 @@
+:root {
+  --light-bg-color: #fff;
+  --light-bg-element-color: #c7c7c7;
+  --light-font-color: #000;
+  --dark-bg-color: #010409;
+  --dark-bg-element-color: #161b22;
+  --dark-font-color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
+#body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  background-color: #010409;
-  color: #fff;
+  background-color: var(--light-bg-color);
+  color: var(--light-font-color);
   user-select: none;
   padding: 20px;
 }
@@ -16,22 +25,24 @@ body {
   height: 30px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .targetNb,
 .time,
 .info {
-  background: #161b22;
+  background: var(--light-bg-element-color);
   border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   height: 30px;
 }
 
 .main-container {
-  background: #161b22;
-  color: #fff;
+  background: var(--light-bg-element-color);
+  color: var(--light-font-color);
   font-size: 40px;
   margin-top: 10px;
   height: 70vh;
@@ -50,15 +61,46 @@ body {
   height: 10vh;
   width: 100%;
   font-size: 40px;
-  background: #161b22;
-  color: #fff;
+  background: var(--light-bg-element-color);
+  color: var(--light-font-color);
 }
 
-#body {
+.container-underpages {
   padding: 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.theme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.moon {
+  position: relative;
+  top: 0;
+  left: 3px;
+  height: 30px;
+  width: 30px;
+  background-color: var(--light-font-color);
+  border-radius: 50%;
+}
+
+.moon2 {
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  height: 27px;
+  width: 27px;
+  background-color: var(--dark-font-color);
+  border-radius: 50%;
 }
 
 .underpages {
@@ -66,8 +108,8 @@ body {
   width: 40vw;
   margin-top: 25px;
   font-size: 30px;
-  background: #161b22;
-  color: #fff;
+  background: var(--light-bg-element-color);
+  color: var(--light-font-color);
   display: flex;
   justify-content: center;
   flex-direction: column;

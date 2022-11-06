@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="/js/index.js"></script>
 	<script defer src="/js/mouse.js"></script>
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/mouse.css">
@@ -12,12 +13,12 @@
 	<title>Games - Mouse</title>
 </head>
 
-<body>
+<body id="body">
 	<div id="container-info" class="container-info">
 		<div id="time" class="time"><span id="timeCount" class="timeCount">10</span> seconds left</div>
 	</div>
-	<button id="clickBtn" class="main-container" onclick="clickBtn()">0</button>
-	<button id="restart" class="restartBtn" onclick="restartBtn()">Restart</button>
+	<button id="main-container" class="main-container" onclick="clickBtn()">0</button>
+	<button id="restartBtn" class="restartBtn" onclick="restartBtn()">Restart</button>
 </body>
 
 </html>

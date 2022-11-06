@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script defer src="/js/index.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="shortcut icon" href="/images/joystick.png" type="image/x-icon">
@@ -11,26 +12,28 @@
 </head>
 
 <body id="body">
-	<a href="pages/mouse.html" class="underpages">
-		<div class="underpages-title">Mouse<img src="/images/mouse.png" alt="mouse"></div>
-		<div class="underpages-content">Test : click per seconds</div>
-	</a>
-	<a href="pages/target.html" class="underpages">
-		<div class="underpages-title">Target<img src="/images/target.png" alt="target"></div>
-		<div class="underpages-content">Test : target per seconds</div>
-	</a>
-	<!-- <a href="pages/reaction.html" class="underpages">
+	<div id="container-underpages" class="container-underpages">
+		<a href="pages/mouse.html" id="underpages1" class="underpages">
+			<div class="underpages-title">Mouse<img src="/images/mouse.png" alt="mouse"></div>
+			<div class="underpages-content">Test : click per seconds</div>
+		</a>
+		<a href="pages/target.html" id="underpages2" class="underpages">
+			<div class="underpages-title">Target<img src="/images/target.png" alt="target"></div>
+			<div class="underpages-content">Test : target per seconds</div>
+		</a>
+		<!-- <a href="pages/reaction.html" id="underpages3" class="underpages">
 		<div class="underpages-title">Reaction</div>
 		<div class="underpages-content">A reaction game</div>
 	</a>
-	<a href="pages/snake.html" class="underpages">
+	<a href="pages/snake.html" id="underpages4" class="underpages">
 		<div class="underpages-title">Snake<img src="/images/snake.png" alt="snake"></div>
 		<div class="underpages-content">A basic snake game</div>
 	</a>
-	<a href="pages/keyboard.html" class="underpages">
+	<a href="pages/keyboard.html" id="underpages5" class="underpages">
 		<div class="underpages-title">Keyboard<img src="/images/keyboard.png" alt="keyboard"></div>
 		<div class="underpages-content">Test : key per seconds</div>
 	</a> -->
+	</div>
 </body>
 
 </html>

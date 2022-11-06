@@ -34,8 +34,7 @@ function restartBtn() {
   let timeCount = document.getElementById("timeCount");
   let target = document.getElementById("target");
   let result = document.getElementById("result");
-  console.log(i);
-  if (i == 10) {
+  if (i == 11) {
     i = 1;
     timeC = -1;
     result.innerText = null;
