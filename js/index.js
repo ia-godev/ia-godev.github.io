@@ -1,10 +1,13 @@
-theme = 0;
+let theme = setTheme();
+function setTheme() {
+  if (!document.cookie) {
+    return 1;
+  } else {
+    return document.cookie.split("=")[1];
+  }
+}
 
-loadBtn();
-eventListener();
-toogleTheme();
-
-function loadBtn() {
+(function loadMoonBtn() {
   let body = document.getElementById("body");
   let themeBtn = document.createElement("button");
   let moon = document.createElement("div");
@@ -19,14 +22,12 @@ function loadBtn() {
   themeBtn = document.getElementById("theme");
   themeBtn.appendChild(moon);
   themeBtn.appendChild(moon2);
-}
-
-function eventListener() {
-  let themeBtn = document.getElementById("theme");
-  themeBtn.addEventListener("click", () => {
+  document.getElementById("theme").addEventListener("click", toogleTheme);
+  if (theme == 0) {
     toogleTheme();
-  });
-}
+    toogleTheme();
+  }
+})();
 
 function toogleTheme() {
   let moon = document.getElementById("moon");
@@ -40,6 +41,7 @@ function toogleTheme() {
   let pNb = 1;
   if (theme == 1) {
     theme--;
+    setThemeCookie(theme);
     moon.style.backgroundColor = "var(--light-bg-color)";
     moon2.style.backgroundColor = "var(--dark-bg-color)";
     body.style.backgroundColor = "var(--dark-bg-color)";
@@ -69,6 +71,7 @@ function toogleTheme() {
     }
   } else if (theme == 0) {
     theme++;
+    setThemeCookie(theme);
     moon.style.backgroundColor = "var(--dark-bg-color)";
     moon2.style.backgroundColor = "var(--light-bg-color)";
     body.style.backgroundColor = "var(--light-bg-color)";
@@ -95,6 +98,30 @@ function toogleTheme() {
         document.getElementById("underpages" + pNb++).style.color =
           "var(--light-font-color)";
       }
+    }
+  }
+}
+
+function setThemeCookie(themeValue) {
+  let expiresDate = new Date(2100, 0).toUTCString();
+  if (!document.cookie) {
+    document.cookie =
+      "theme=" +
+      themeValue +
+      "; expires=" +
+      expiresDate +
+      "; path=/; SameSite=Lax";
+  } else {
+    if (themeValue == 0) {
+      document.cookie =
+        "theme=" +
+        themeValue +
+        "; expires=" +
+        expiresDate +
+        "; path=/; SameSite=Lax";
+    } else {
+      document.cookie =
+        "theme=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax";
     }
   }
 }
