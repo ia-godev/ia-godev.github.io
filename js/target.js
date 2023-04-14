@@ -1,19 +1,25 @@
 let timeC = -1;
 let i = 1;
 
-clickTarget();
-
 function randomInt(min, max) {
-  return String(Math.floor(Math.random() * max) + min);
+  max++;
+  if (Math.floor(Math.random() * 2) + 0 == 0) {
+    return String((Math.floor(Math.random() * max) + min) * -1);
+  } else {
+    return String(Math.floor(Math.random() * max) + min);
+  }
 }
 
+clickTarget();
 function clickTarget() {
   let target = document.getElementById("target");
   let result = document.getElementById("result");
-  target.style.position = "absolute";
-  target.style.top = randomInt(20, 40) + "vh";
-  target.style.left = randomInt(10, 80) + "vw";
+  target.style.position = "relative";
+  target.style.top = randomInt(0, 30) + "vh";
+  target.style.left = randomInt(0, 30) + "vw";
   timeC++;
+  let targetNb = document.getElementById("targetNb");
+  targetNb.innerText = timeC;
   if (timeC == 1) {
     let countdown = setInterval(() => {
       let timeCount = document.getElementById("timeCount");
