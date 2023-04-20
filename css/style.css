@@ -25,7 +25,7 @@
   height: 30px;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
 }
 
 .targetNb,
@@ -58,7 +58,7 @@
   border: 0;
   border-radius: 5px;
   margin-top: 10px;
-  height: 10vh;
+  height: 60px;
   width: 100%;
   font-size: 40px;
   background: var(--light-bg-element-color);
@@ -104,8 +104,8 @@
 }
 
 .underpages {
-  height: 20vh;
-  width: 40vw;
+  height: 140px;
+  width: 300px;
   margin-top: 25px;
   font-size: 30px;
   background: var(--light-bg-element-color);
@@ -140,24 +140,16 @@
   padding-left: 10px;
 }
 
-@media (orientation: portrait) {
-  .underpages {
-    height: 20vh;
-    width: 60vw;
-  }
-
+@media (hover: none) {
+  .underpages:hover .underpages-title,
   .underpages-title,
   .underpages-content {
     transition: all 0ms;
-    text-decoration: underline;
+    text-decoration: none;
+    transform: none;
   }
 
   .underpages-content {
     z-index: -1;
-  }
-
-  .underpages:hover .underpages-title,
-  .underpages-content {
-    transform: none;
   }
 }

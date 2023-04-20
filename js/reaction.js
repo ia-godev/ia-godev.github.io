@@ -1,30 +1,29 @@
-let timeBtn = 0;
-let timeUp = 0;
+let color = document.getElementById("color");
+let timeCount = document.getElementById("timeCount");
+let clickCount = 0;
+let timer = 0;
 
 function clickBtn() {
-  let ClickBtn = document.getElementById("clickBtn");
-  let timeCount = document.getElementById("timeCount");
-  let color = document.getElementById("color");
-  let sec = Math.floor(Math.random() * 5000) + 1000;
-  if (timeBtn == 0) {
+  let timerCount = setInterval(() => {
+    if (clickCount == 1) {
+      timeCount.innerText = ++timer / 100;
+    }
+  }, 10);
+  if (clickCount == 0) {
+    let sec = Math.floor(Math.random() * 3000) + 1000;
     setTimeout(() => {
       color.style.backgroundColor = "green";
-      timeBtn++;
+      clickCount++;
     }, sec);
-  } else if (timeBtn == 1) {
-    timeUp = 0;
-    timeBtn = 0;
-    clearTimeout(out);
+  } else if (clickCount == 1) {
+    clearInterval(timerCount);
+    clickCount++;
   }
 }
-
-let out = setInterval(() => {
-  if (timeBtn == 1) {
-    timeCount.innerText = timeUp++;
-  }
-}, 1);
-
 function restartBtn() {
   color.style.backgroundColor = "red";
   timeCount.innerText = 0;
+  clickCount = 0;
+  timer = 0;
+  location.reload();
 }

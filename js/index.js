@@ -35,6 +35,7 @@ function toogleTheme() {
   let body = document.getElementById("body");
   let targetNb = document.getElementById("targetNb");
   let time = document.getElementById("time");
+  let info = document.getElementById("info");
   let mainContainer = document.getElementById("main-container");
   let restartBtn = document.getElementById("restartBtn");
   let containerUnderpages = document.getElementById("container-underpages");
@@ -58,6 +59,10 @@ function toogleTheme() {
         }
         time.style.backgroundColor = "var(--dark-bg-element-color)";
         time.style.color = "var(--dark-font-color)";
+      }
+      if (info != null) {
+        info.style.backgroundColor = "var(--dark-bg-element-color)";
+        info.style.color = "var(--dark-font-color)";
       }
     } else if (containerUnderpages != null) {
       while (
@@ -88,6 +93,10 @@ function toogleTheme() {
         }
         time.style.backgroundColor = "var(--light-bg-element-color)";
         time.style.color = "var(--light-font-color)";
+      }
+      if (info != null) {
+        info.style.backgroundColor = "var(--light-bg-element-color)";
+        info.style.color = "var(--light-font-color)";
       }
     } else if (containerUnderpages != null) {
       while (
